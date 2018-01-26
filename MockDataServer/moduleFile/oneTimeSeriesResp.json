@@ -1,0 +1,84 @@
+{
+
+			  "snapshots": [
+				{
+				  "time": "2017-10-16T00:00:02.946Z",
+				  "variables": [
+					{
+					  "name": "NrOfAlarms",
+					  "value": "0.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "ProtectionLevel",
+					  "value": "1.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "Opmode",
+					  "value": "2.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "StopCond",
+					  "value": "10.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "NCProgramStatus",
+					  "value": "3.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "Feedoverride",
+					  "value": "40.0",
+					  "qualityCode": "0"
+					}
+				  ]
+				},
+				{
+				  "time": "2017-10-16T00:00:09.025Z",
+				  "variables": [
+					{
+					  "name": "NrOfAlarms",
+					  "value": "0.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "ProtectionLevel",
+					  "value": "1.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "Opmode",
+					  "value": "2.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "StopCond",
+					  "value": "13.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "NCProgramStatus",
+					  "value": "3.0",
+					  "qualityCode": "0"
+					},
+					{
+					  "name": "Feedoverride",
+					  "value": "40.0",
+					  "qualityCode": "0"
+					}
+				  ]
+				}
+			  ],
+			  "_links": {
+				"self": {
+				  "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/CH1_BasicConfig/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+				},
+				"next": {
+				  "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/CH1_BasicConfig/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+				}
+			  }
+
+		}

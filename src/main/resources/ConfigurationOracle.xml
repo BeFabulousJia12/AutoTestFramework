@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases><!-- 别名 -->
+        <typeAlias alias="OEE" type="mapper.OEEMapper" />
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED"><!-- 数据源 -->
+                <property name="driver" value="oracle.jdbc.OracleDriver" />
+                <property name="url" value="jdbc:oracle:thin:@//SHI6W385.net.plm.eds.com:1521/sewcdev" />
+                <property name="username" value="sewcoee" />
+                <property name="password" value="mindoee" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers><!-- ORM映射文件 -->
+        <mapper resource="mybatis/OEEMapper.xml" />
+    </mappers>
+</configuration>

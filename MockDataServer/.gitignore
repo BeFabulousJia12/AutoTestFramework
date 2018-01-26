@@ -1,0 +1,24 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+__pycache__/global_list.cpython-36.pyc
+__pycache__/
+moduleFile/__init__.py
+
+### PyCharm ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### OutClass ###
+out/
+

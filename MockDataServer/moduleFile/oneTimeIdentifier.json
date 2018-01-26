@@ -1,0 +1,43 @@
+{
+        "identifier": "l2530",
+        "name": "Schaeffler_Quality_TEST",
+        "hierarchyPath": "sag-ctchi/own_assets/Schaeffler_Quality_TEST/",
+        "assetId": "00E30D9EF86A4C49BEC18678750DCFD2",
+        "parentId": "F43A44BD78AE4150BD3390ACC3403B36",
+        "description": "A virtual asset used in Schaeffler project by Chengdu team. ",
+        "type": "asset",
+        "assetType": "factory",
+        "location": {
+          "street": "Xixin Avenue",
+          "houseNo": "7",
+          "city": "Chengdu",
+          "postalcode": "611731",
+          "country": "CN",
+          "district": "",
+          "region": "230",
+          "latitude": 0,
+          "longitude": 0
+        },
+        "endCustomerId": null,
+        "_links": {
+          "self": {
+            "href": "https://mindgate.appsdev.mindsphere.io/api/assetmanagement/api/assets/00E30D9EF86A4C49BEC18678750DCFD2"
+          },
+          "parent": {
+            "href": "https://mindgate.appsdev.mindsphere.io/api/assetmanagement/api/assets/F43A44BD78AE4150BD3390ACC3403B36"
+          },
+          "children": {
+            "href": "https://mindgate.appsdev.mindsphere.io/api/assetmanagement/api/assets/00E30D9EF86A4C49BEC18678750DCFD2/children"
+          },
+          "metadata": {
+            "href": "https://mindgate.appsdev.mindsphere.io/api/assetmanagement/api/assets/00E30D9EF86A4C49BEC18678750DCFD2/metaData/"
+          },
+          "aspects": {
+            "href": "https://mindgate.appsdev.mindsphere.io/api/assetmanagement/api/assets/00E30D9EF86A4C49BEC18678750DCFD2/aspects"
+          },
+          "events": {
+            "href": "https://mindgate.appsdev.mindsphere.io/api/assetmanagement/api/events/search/findByAssetId?assetId=00E30D9EF86A4C49BEC18678750DCFD2"
+          }
+        }
+
+}

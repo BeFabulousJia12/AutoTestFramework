@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" parallel="methods" thread-count="1">
+    <test name="AutoTest">
+    <parameter name="WorkBook" value="src/test/resources/Http_Request_Data.xlsx" />
+        <classes>
+            <class name="testcase.HTTPTest">
+            <methods>
+                <include name="RestfulAPITest"/>
+                <!--<include name="OracleQueryOEEInfo"/>-->
+            </methods>
+            </class>
+            <class name="testcase.WedDriverTest">
+                <!--<methods>-->
+                    <!--<include name="ChromeHeadlessTest"/>-->
+                    <!--<include name="WebUITest" />-->
+                <!--</methods>-->
+            </class>
+        </classes>
+    </test>
+    <test name = "WebDriver">
+        <groups>
+            <run>
+                <!--<exclude name="brokenTests"  />-->
+                <include name="ChromeHeadless"  />
+                <include name="WebUI"  />
+            </run>
+        </groups>
+    </test>
+</suite>

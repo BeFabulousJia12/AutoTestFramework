@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="mapper.OEEMapper">
+
+    <!-- 所有列 -->
+    <sql id="Column_list">
+        LINE,
+        BEGINDATE,
+        ENDDATE,
+        SHIFTDATE,
+        SHIFTNAME,
+        RUNNING,
+        WARNING,
+        PLANDOWN,
+        NONPRODUCTIONPLAN,
+        QUALITYLOSS,
+        PERFORMANCELOSS,
+        HOLIDAY,
+        TOTALDURATION,
+        OUTPUT
+    </sql>
+
+    <resultMap id="ListTest" type="model.OEEInfo" >
+        <result column="LINE" property="line" />
+        <result column="BEGINDATE" property="beginDate" />
+        <result column="ENDDATE" property="endDate" />
+        <result column="SHIFTDATE" property="shiftDate" />
+        <result column="SHIFTNAME" property="shiftName" />
+        <result column="RUNNING" property="running" />
+        <result column="WARNING" property="warning" />
+        <result column="PLANDOWN" property="planDown" />
+        <result column="NONPRODUCTIONPLAN" property="nonProductionPlan" />
+        <result column="QUALITYLOSS" property="qualityLoss" />
+        <result column="PERFORMANCELOSS" property="performanceLoss" />
+        <result column="HOLIDAY" property="holiday" />
+        <result column="TOTALDURATION" property="totalDuration" />
+        <result column="OUTPUT" property="outPut" />
+    </resultMap>
+
+
+    <!-- Query all parameters from OEEInfo -->
+    <select id="getOEEInfo" resultMap="ListTest">
+        <!-- SELECT <include refid="Column_list" /> FROM T_OEE_MACHINE_OEE WHERE BEGINDATE = TO_TIMESTAMP(#{begindate},'yyyy-mm-dd hh24:mi:ss') and ENDDATE = TO_TIMESTAMP(#{enddate},'yyyy-mm-dd hh24:mi:ss')-->
+        SELECT <include refid="Column_list" /> FROM T_OEE_MACHINE_OEE WHERE BEGINDATE = TO_TIMESTAMP(#{begindate},'DD-Mon-YY HH12.MI.SS.FF PM') and ENDDATE = TO_TIMESTAMP(#{enddate},'DD-Mon-YY HH12.MI.SS.FF PM')
+    </select>
+
+</mapper>

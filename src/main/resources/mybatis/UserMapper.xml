@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="mapper.UserMapper">
+
+    <!-- 所有列 -->
+    <sql id="Column_list">
+        user_id,
+        user_name,
+        user_score
+    </sql>
+
+    <resultMap id="ListTest" type="model.UserInfo" >
+        <id  column="user_id" property="id" />
+        <result column="user_name" property="name" />
+        <result column="user_score" property="score" />
+    </resultMap>
+    <resultMap id="TestInfoResult" type="model.TestInfo" >
+        <id column="test_address" property="testAddress" />
+        <result column="test_name" property="testName" />
+        <result column="test_No" property="testNo" />
+    </resultMap>
+
+    <!-- 根据ID查询数据 -->
+    <select id="getid" parameterType="int" resultMap="ListTest">
+        SELECT
+        <include refid="Column_list" />
+        FROM user_info WHERE user_id = #{id}
+    </select>
+
+    <!-- 根据Name查询数据 -->
+    <select id="getTestInfo" resultMap="ListTest">
+        SELECT * FROM user_info WHERE user_name in (SELECT test_name FROM test_info WHERE test_info.test_address = #{address} and test_info.test_code = #{number})
+    </select>
+
+    <!-- 查询所有的数据 -->
+    <select id="getAll" resultMap="ListTest">
+        SELECT
+        <include refid="Column_list" />
+        FROM user_info
+    </select>
+
+    <!-- 插入User数据 -->
+    <select id="insertUser" parameterType="model.UserInfo">
+        INSERT INTO user_info (<include refid="Column_list" />)
+        VALUES (#{id},#{name},#{score})
+    </select>
+
+</mapper>

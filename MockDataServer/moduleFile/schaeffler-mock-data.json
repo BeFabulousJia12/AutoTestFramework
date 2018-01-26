@@ -1,0 +1,1068 @@
+[
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetreporting/api.svc/Assets",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "value": [
+          {
+            "name": "MockAsset01",
+            "assetId": "00E30D9EF86A4C49BEC18678750DCFD2",
+            "identifier": "l2530"
+          },
+          {
+            "name": "MockAsset02",
+            "assetId": "5cd3f25e8e034866a8123b88d4b00dd3",
+            "identifier": "TC5000"
+          },
+          {
+            "name": "Quality_3_Aspects",
+            "assetId": "00E30D9E0000000BEC18678750DCFD2",
+            "identifier": "AS30000"
+          },
+          {
+            "name": "Quality_3_Variables",
+            "assetId": "00E30D9EF8656324BEC186700000000",
+            "identifier": "VA300"
+          },
+          {
+            "name": "GoodQuality",
+            "assetId": "00E30D9EF8656324BEC1867871111111",
+            "identifier": "PLC100"
+          },
+          {
+            "name": "BadQuality",
+            "assetId": "00E30D9EF8656324BEC186782222222",
+            "identifier": "PLC200"
+          },
+          {
+            "name": "ReworkQuality",
+            "assetId": "00E30D9EF8656324BEC18673333333",
+            "identifier": "PLC300"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/00E30D9E0000000BEC18678750DCFD2/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "Good",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "asd4+6asd6a1d65",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Good_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyOtherAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            },
+            {
+              "aspectName": "Bad",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "asd4+6asd6a1d65",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Bad_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyOtherAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            },
+            {
+              "aspectName": "Rework",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "asd4+6asd6a1d65",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Rework_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyOtherAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/00E30D9EF86A4C49BEC18678750DCFD2/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "CH1_BasicConfig",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "CH1_BasicConfig",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "NrOfAlarms",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "ProtectionLevel",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "Opmode",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "StopCond",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "NCProgramStatus",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "Feedoverride",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyOtherAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/00E30D9EF8656324BEC186700000000/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "Quality_3_Variables",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "22222222222222",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Good_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "Bad_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "Rework_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyOtherAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/5cd3f25e8e034866a8123b88d4b00dd3/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "CH2_BasicConfig",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "CH2_BasicConfig",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "NrOfAlarms",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "ProtectionLevel",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "Opmode",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "StopCond",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "NCProgramStatus",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                },
+                {
+                  "variableName": "Feedoverride",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/00E30D9EF8656324BEC1867871111111/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "Good",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "Good",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Good_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/00E30D9EF8656324BEC186782222222/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "Bad",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "Bad",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Bad_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/assetmanagement/api/assets/00E30D9EF8656324BEC18673333333/aspects",
+      "queries": null
+    },
+    "response": {
+      "json": {
+        "_embedded": {
+          "aspects": [
+            {
+              "aspectName": "Rework",
+              "active": true,
+              "readingCycle": 0,
+              "aspectTypeId": "Rework",
+              "transferCycle": 0,
+              "bufferSize": 100,
+              "uploadChannel": "channel1",
+              "variables": [
+                {
+                  "variableName": "Rework_Piece_Num",
+                  "unit": "A",
+                  "dataFormat": "FLOAT",
+                  "onDataChanged": true
+                }
+              ],
+              "_links": {
+                "self": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects/anyAspectName"
+                },
+                "asset": {
+                  "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId"
+                }
+              }
+            }
+          ]
+        },
+        "_links": {
+          "self": {
+            "href": "https://tenant.apps.mindsphere.io/api/assets/anyAssetId/aspects"
+          }
+        },
+        "page": {
+          "size": 0,
+          "totalElements": 2,
+          "totalPages": 1,
+          "number": 0
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9EF86A4C49BEC18678750DCFD2\",\"aspectName\":\"CH1_BasicConfig\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "NrOfAlarms",
+                "value": "0.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "ProtectionLevel",
+                "value": "1.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Opmode",
+                "value": "2.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "StopCond",
+                "value": "10.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "NCProgramStatus",
+                "value": "3.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Feedoverride",
+                "value": "40.0",
+                "qualityCode": "0"
+              }
+            ]
+          },
+          {
+            "time": "2017-10-16T00:00:09.025Z",
+            "variables": [
+              {
+                "name": "NrOfAlarms",
+                "value": "0.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "ProtectionLevel",
+                "value": "1.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Opmode",
+                "value": "2.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "StopCond",
+                "value": "13.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "NCProgramStatus",
+                "value": "3.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Feedoverride",
+                "value": "40.0",
+                "qualityCode": "0"
+              }
+            ]
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/CH1_BasicConfig/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/CH1_BasicConfig/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"5cd3f25e8e034866a8123b88d4b00dd3\",\"aspectName\":\"CH2_BasicConfig\",\"time\":{\"ge\":{\"value\":\"2017-09-30T14:02:17.796Z\"},\"le\":{\"value\":\"2017-09-30T14:02:17.806Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "NrOfAlarms",
+                "value": "0.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "ProtectionLevel",
+                "value": "1.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Opmode",
+                "value": "2.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "StopCond",
+                "value": "10.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "NCProgramStatus",
+                "value": "3.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Feedoverride",
+                "value": "40.0",
+                "qualityCode": "0"
+              }
+            ]
+          },
+          {
+            "time": "2017-10-16T00:00:09.025Z",
+            "variables": [
+              {
+                "name": "NrOfAlarms",
+                "value": "0.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "ProtectionLevel",
+                "value": "1.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Opmode",
+                "value": "2.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "StopCond",
+                "value": "13.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "NCProgramStatus",
+                "value": "3.0",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Feedoverride",
+                "value": "40.0",
+                "qualityCode": "0"
+              }
+            ]
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/CH1_BasicConfig/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/CH1_BasicConfig/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9E0000000BEC18678750DCFD2\",\"aspectName\":\"Good\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Good_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/Good/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/Good/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9E0000000BEC18678750DCFD2\",\"aspectName\":\"Rework\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Rework_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/Rework/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/Rework/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9E0000000BEC18678750DCFD2\",\"aspectName\":\"Bad\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Bad_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/Bad/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/29557B237F5D495CA76586C17D45E20F/aspects/Bad/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9EF8656324BEC186700000000\",\"aspectName\":\"Quality_3_Variables\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Good_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Bad_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              },
+              {
+                "name": "Rework_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC186700000000/aspects/Quality_3_Variables/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC186700000000/aspects/Quality_3_Variables/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9EF8656324BEC1867871111111\",\"aspectName\":\"Good\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Good_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC1867871111111/aspects/Good/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC1867871111111/aspects/Good/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9EF8656324BEC186782222222\",\"aspectName\":\"Bad\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Bad_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC186782222222/aspects/Bad/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC186782222222/aspects/Bad/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/timeseries/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9EF8656324BEC18673333333\",\"aspectName\":\"Rework\",\"time\":{\"ge\":{\"value\":\"2001-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-10-16T00:00:02.946Z",
+            "variables": [
+              {
+                "name": "Rework_Piece_Num",
+                "value": "44",
+                "qualityCode": "0"
+              }
+            ]
+          }
+
+        ],
+        "_links": {
+          "self": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC18673333333/aspects/Rework/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T00:00:00.001Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          },
+          "next": {
+            "href": "https://siemens-rc-de-dev.appsdev.mindsphere.io/timeseries/api/assets/00E30D9EF8656324BEC18673333333/aspects/Rework/timeseries?filter=%7B%22time%22:%7B%22ge%22:%7B%22value%22:%222017-10-16T02:03:13.684Z%22%7D,%22le%22:%7B%22value%22:%222018-01-01T00:00:00.001Z%22%7D%7D%7D"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"00E30D9EF86A4C49BEC18678750DCFD2\",\"aspectName\":\"Fix\",\"time\":{\"ge\":{\"value\":\"2009-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2010-11-10T12:23:52.317Z",
+            "variables": [
+              {
+                "name": "Status",
+                "value": "idle"
+              },
+              {
+                "name": "shift_id",
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "time": "2015-09-17T17:43:13.905Z",
+            "variables": [
+              {
+                "name": "Status",
+                "value": "working"
+              },
+              {
+                "name": "shift_id",
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "time": "2017-03-28T09:40:24.867Z",
+            "variables": [
+              {
+                "name": "Status",
+                "value": "working"
+              },
+              {
+                "name": "shift_id",
+                "value": "2"
+              }
+            ]
+          }
+        ],
+        "page": {
+          "size": 2,
+          "totalElements": 5,
+          "totalPages": 3,
+          "number": 1
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "get",
+      "uri": "/api/search/findTimeseries",
+      "queries": {
+        "filter": "{\"assetId\":\"5cd3f25e8e034866a8123b88d4b00dd3\",\"aspectName\":\"Bug\",\"time\":{\"ge\":{\"value\":\"2017-01-01T00:00:00.001Z\"},\"le\":{\"value\":\"2018-01-01T00:00:00.001Z\"}}}",
+        "sort": "time,asc"
+      }
+    },
+    "response": {
+      "json": {
+        "snapshots": [
+          {
+            "time": "2017-01-05T00:00:00.001Z",
+            "variables": [
+              {
+                "name": "Status",
+                "value": "idle"
+              },
+              {
+                "name": "shift_id",
+                "value": "5"
+              }
+            ]
+          }
+        ],
+        "page": {
+          "size": 2,
+          "totalElements": 5,
+          "totalPages": 3,
+          "number": 1
+        }
+      }
+    }
+  }
+]

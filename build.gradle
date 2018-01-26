@@ -1,0 +1,61 @@
+group 'test3'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    //maven{ url "http://maven.aliyun.com/nexus/content/groups/public/"}
+    maven{url "http://146.122.219.146:8081/repository/maven-public/"}
+    //mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.testng:testng:6.8'
+    //compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '8.1.10.v20130312'
+    //compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '8.1.10.v20130312'
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.8.v20171121'
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.8.v20171121'
+    compile group: 'org.eclipse.jetty', name: 'jetty-client', version: '9.4.8.v20171121'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.38'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.10.1'
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.9'
+    compile group: 'org.python', name: 'jython-standalone', version: '2.5.2'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    compile group: 'org.mybatis', name: 'mybatis', version: '3.4.5'
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.4.2'
+//    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.1.1'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.8.1'
+    compile('net.sourceforge.htmlunit:htmlunit:2.27')
+    compile files('lib/ojdbc7.jar')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+test {
+//    filter {
+//        includeTestsMatching "test*"
+//    }
+
+useTestNG{
+       suites "src/test/resources/testng.xml"
+    }
+}
