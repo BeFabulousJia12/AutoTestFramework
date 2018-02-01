@@ -261,8 +261,7 @@ public class HTTPTest {
     @Test
     public void POSTGREQueryTestInfo() {
         SqlSession session = sqlSessionFactory.openSession();
-        UserMapper mapper = session.getMapper(UserMapper.class);
-        List<UserInfo> infolist = mapper.getTestInfo("poland", 4);
+        UserMapper mapper = session.getMapper(UserMapper.class);        List<UserInfo> infolist = mapper.getTestInfo("poland", 4);
         for (UserInfo info : infolist) {
             System.out.println("Get Data from postgreSql " + info.getScore() + ",id is " + info.getId());
             Assert.assertEquals(infolist.size(), 3);
@@ -290,8 +289,8 @@ public class HTTPTest {
                 HtmlElement password = (HtmlElement) htmlPage.getElementById("j_password");
                 HtmlElement button = (HtmlElement) htmlPage.getElementById("logOnFormSubmit");
                 if (name != null && password != null && button != null) {
-                    name.type("nanzhang@siemens.com");
-                    password.type("Lsff0uosm$");
+                    name.type("yourname@.com");
+                    password.type("your password");
                     HtmlPage page = button.click();
                     Thread.sleep(10000);
                 }
