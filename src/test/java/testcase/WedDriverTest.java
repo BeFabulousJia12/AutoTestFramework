@@ -26,19 +26,33 @@ public class WedDriverTest {
     ChromeOptions chromeOptions;
     @BeforeGroups(groups={"WebUI"})
     public void setupUI() throws IOException {
-
+	//for windows platform
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        chromeOptions = new ChromeOptions();
+	//for linux platform
+	// System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+       
+	//System.setProperty("webdriver.chrome.driver", "/usr/dev/selenium/chromedriver");
+	chromeOptions = new ChromeOptions();
+	//for windows platform
         chromeOptions.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+        //for linux platform
+	//chromeOptions.setBinary("/usr/bin/google-chrome");
         chromeOptions.addArguments();
         webDriver = new ChromeDriver(chromeOptions);
         }
     @BeforeGroups(groups={"ChromeHeadless"})
     public void setupChromeHeadless() throws IOException {
 
+        //for windows platform
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        chromeOptions = new ChromeOptions();
+	//for linux platform
+	//System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "/usr/dev/selenium/chromedriver");
+	chromeOptions = new ChromeOptions();
+	//for windows platform
         chromeOptions.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+        //for linux platform
+        // chromeOptions.setBinary("/usr/bin/google-chrome");
         chromeOptions.addArguments("--headless");
         webDriver = new ChromeDriver(chromeOptions);
     }
@@ -52,8 +66,8 @@ public class WedDriverTest {
         WebElement userName = webDriver.findElement(By.id("j_username"));
         WebElement passWord = webDriver.findElement(By.id("j_password"));
         WebElement submit = webDriver.findElement(By.id("logOnFormSubmit"));
-        userName.sendKeys("yourname@siemens.com");
-        passWord.sendKeys("yourPassword");
+        userName.sendKeys("nanzhang@siemens.com");
+        passWord.sendKeys("Lsff0uosm$");
         submit.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='indicatorSelect']/option")));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("indicatorSelect")));
@@ -87,8 +101,8 @@ public class WedDriverTest {
         WebElement userName = webDriver.findElement(By.id("j_username"));
         WebElement passWord = webDriver.findElement(By.id("j_password"));
         WebElement submit = webDriver.findElement(By.id("logOnFormSubmit"));
-        userName.sendKeys("yourname@siemens.com");
-        passWord.sendKeys("yourPassword");
+        userName.sendKeys("nanzhang@siemens.com");
+        passWord.sendKeys("Lsff0uosm$");
         submit.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='indicatorSelect']/option")));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("indicatorSelect")));
