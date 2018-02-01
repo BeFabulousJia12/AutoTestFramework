@@ -66,8 +66,8 @@ public class WedDriverTest {
         WebElement userName = webDriver.findElement(By.id("j_username"));
         WebElement passWord = webDriver.findElement(By.id("j_password"));
         WebElement submit = webDriver.findElement(By.id("logOnFormSubmit"));
-        userName.sendKeys("nanzhang@siemens.com");
-        passWord.sendKeys("Lsff0uosm$");
+        userName.sendKeys("yourname");
+        passWord.sendKeys("yourpassword");
         submit.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='indicatorSelect']/option")));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("indicatorSelect")));
@@ -101,8 +101,8 @@ public class WedDriverTest {
         WebElement userName = webDriver.findElement(By.id("j_username"));
         WebElement passWord = webDriver.findElement(By.id("j_password"));
         WebElement submit = webDriver.findElement(By.id("logOnFormSubmit"));
-        userName.sendKeys("nanzhang@siemens.com");
-        passWord.sendKeys("Lsff0uosm$");
+        userName.sendKeys("yourname");
+        passWord.sendKeys("yourpassword");
         submit.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='indicatorSelect']/option")));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("indicatorSelect")));
