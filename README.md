@@ -31,12 +31,14 @@
 * 还有一种是利用Chrome Headless特性，无界面操作。 
 
 很明显无界面操作可以提高运行速度，而且在CICD环境里，可以不用再装类似windows的界面图形的系统去跑webdriver的E2E Case.
-注意：4.1. 代码里有基于windows平台上运行的headless，以及linux平台上运行的headless(chromedriver放在了linux系统的"/usr/dev/selenium")
-	  4.2. chromedriver在两个平台上有不同的文件，也就是windows上后缀为.exe的文件和64位的linux版本。在不同的平台上，需要对应不同的chromedriver才能执行成功。
-	  4.3. chromedriver的版本需要跟chrome浏览器的版本对应起来。
-	  4.4. chromedriver最新版本需要翻墙出去下载：https://sites.google.com/a/chromium.org/chromedriver/home
-	  4.5. 关于linux下安装chrome浏览器，具体方式有两种：http://blog.csdn.net/sdujava2011/article/details/50880663  
-	  个人的方式是，先在官网下载chrome的linux版本(例如：google-chrome-stable_current_amd64.deb)，然后将这个安装包放到linux环境里，再执行64位的安装命令：sudo dpkg -i google-chrome-stable_current_amd64.deb，即可。
+
+注意：  
+4.1. 代码里有基于windows平台上运行的headless，以及linux平台上运行的headless(chromedriver放在了linux系统的"/usr/dev/selenium")  
+4.2. chromedriver在两个平台上有不同的文件，也就是windows上后缀为.exe的文件和64位的linux版本。在不同的平台上，需要对应不同的chromedriver才能执行成功。  
+4.3. chromedriver的版本需要跟chrome浏览器的版本对应起来。  
+4.4. chromedriver最新版本需要翻墙出去下载：https://sites.google.com/a/chromium.org/chromedriver/home  
+4.5. 关于linux下安装chrome浏览器，具体方式有两种：http://blog.csdn.net/sdujava2011/article/details/50880663  
+个人的方式是，先在官网下载chrome的linux版本(例如：google-chrome-stable_current_amd64.deb)，然后将这个安装包放到linux环境里，再执行64位的安装命令：sudo dpkg -i google-chrome-stable_current_amd64.deb，即可。
 
 5. 在启动整个测试之前，会用一个线程去启动一个http的server，这个http server是基于jetty的容器，这个http server主要功能就是为了完成上面说的第三点需求而生，如果你的项目里不需要验证发送出去的http请求，你也可以不用管它。但是，如果你需要做自己业务逻辑的验证工作，你需要在HTTPTestServer这个文件里，加servlet去处理进来的REST请求。  
 e.g.
